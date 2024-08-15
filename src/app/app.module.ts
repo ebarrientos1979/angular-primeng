@@ -5,10 +5,18 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ButtonModule } from 'primeng/button';
 import { SidebarMainComponent } from './sidebar/sidebar-main/sidebar-main.component';
+import { DataViewModule } from 'primeng/dataview';
+import { ProductoModule } from './producto/producto.module';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
-  imports: [BrowserModule, AppRoutingModule, ButtonModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ButtonModule,
+    ProductoModule,
+    DataViewModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
