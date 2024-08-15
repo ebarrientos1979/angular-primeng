@@ -7,6 +7,7 @@ import { ButtonModule } from 'primeng/button';
 import { SidebarMainComponent } from './sidebar/sidebar-main/sidebar-main.component';
 import { DataViewModule } from 'primeng/dataview';
 import { ProductoModule } from './producto/producto.module';
+import { CardModule } from 'primeng/card';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
@@ -15,6 +16,7 @@ import { ProductoModule } from './producto/producto.module';
     AppRoutingModule,
     ButtonModule,
     ProductoModule,
+    CardModule,
     DataViewModule,
   ],
   providers: [],
