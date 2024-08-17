@@ -1,6 +1,6 @@
 <div class="row-2 p-4">
     <div class="col-2">
-        <p-card [header]="producto.oferta.toString()">
+        <p-card [header]="producto.oferta === 1 ? 'Producto en oferta' : 'Producto regular'">
             <p-card [header]="producto.nombreProducto" [subheader]="producto.descripcion" [style]="{ width: '25vh' }">
                 <ng-template pTemplate="header">
                     <img alt="Card" [src]="producto.linkImagen" />

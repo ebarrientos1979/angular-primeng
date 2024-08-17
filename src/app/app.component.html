@@ -1,16 +1,13 @@
 <div class="d-flex flex-column">
     <app-menu-main></app-menu-main>
-
     <div class="d-flex flex-grow-1">
         <app-sidebar-main></app-sidebar-main>
         <div class="d-flex flex-column flex-fill">
             <app-find-producto></app-find-producto>
-
-            <div class="mt-auto">
-                <app-card></app-card>    
+            <div class="mt-auto">                
+                <app-card [producto]="productos[0]"></app-card>
             </div>
         </div>
-
     </div>
 </div>
 
