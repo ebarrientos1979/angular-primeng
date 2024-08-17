@@ -8,6 +8,7 @@ import { SidebarMainComponent } from './general/components/sidebar-main/sidebar-
 import { DataViewModule } from 'primeng/dataview';
 import { ProductoModule } from './producto/producto.module';
 import { CardModule } from 'primeng/card';
+import { GeneralModule } from './general/general.module';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
@@ -18,6 +19,7 @@ import { CardModule } from 'primeng/card';
     ProductoModule,
     CardModule,
     DataViewModule,
+    GeneralModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
