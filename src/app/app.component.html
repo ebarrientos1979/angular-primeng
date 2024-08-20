@@ -4,8 +4,10 @@
         <app-sidebar-main></app-sidebar-main>
         <div class="d-flex flex-column flex-fill">
             <app-find-producto></app-find-producto>
-            <div class="mt-auto">                
-                <app-card [producto]="productos[0]"></app-card>
+            <div class="row overflow-auto" style="flex-grow:1;">                
+                <div class="col-md-4">
+                    <app-card [producto]="productos[0]"></app-card>
+                </div>                                
             </div>
         </div>
     </div>
