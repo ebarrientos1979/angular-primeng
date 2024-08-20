@@ -1,7 +1,18 @@
 export interface ProductoInterface {
-  oferta: number;
-  nombreProducto: string;
-  precio: number;
-  linkImagen: string;
-  descripcion: string;
+  productos: Producto[];
+}
+
+export interface Producto {
+  id: number;
+  title: string;
+  price: number;
+  description: string;
+  category: string;
+  image: string;
+  rating: Rating;
+}
+
+export interface Rating {
+  rate: number;
+  count: number;
 }

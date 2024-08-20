@@ -9,6 +9,7 @@ import { DataViewModule } from 'primeng/dataview';
 import { ProductoModule } from './producto/producto.module';
 import { CardModule } from 'primeng/card';
 import { GeneralModule } from './general/general.module';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
@@ -22,7 +23,7 @@ import { GeneralModule } from './general/general.module';
     GeneralModule,
     BrowserAnimationsModule,
   ],
-  providers: [],
+  providers: [provideHttpClient()],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

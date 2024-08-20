@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ProductoInterface } from './producto/model/producto.model';
+import { ProductosService } from './producto/services/productos.service';
+import { ProductoInterface, Producto } from './producto/model/producto.model';
 
 @Component({
   selector: 'app-root',
@@ -7,16 +8,15 @@ import { ProductoInterface } from './producto/model/producto.model';
   styleUrl: './app.component.scss',
 })
 export class AppComponent implements OnInit {
-  productos: ProductoInterface[] = [];
+  productos: Producto[] = [];
+
+  constructor(private productosService: ProductosService) {}
 
   ngOnInit(): void {
-    this.productos.push({
-      oferta: 0,
-      nombreProducto: 'Pechuga de Pavita',
-      descripcion: 'Pechuga de Pavita en trozos',
-      precio: 13.8,
-      linkImagen:
-        'https://plazavea.vteximg.com.br/arquivos/HP-BANNERDESTACADO-FOOD-PP-D-FRESCOS-12-16-AGOSTO-JUN-5.webp',
-    });
+    this.productosService
+      .getProductos()
+      .subscribe((data: ProductoInterface) => {
+        this.productos = data.productos;
+      });
   }
 }

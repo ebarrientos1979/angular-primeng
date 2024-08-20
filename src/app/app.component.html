@@ -5,8 +5,8 @@
         <div class="d-flex flex-column flex-fill">
             <app-find-producto></app-find-producto>
             <div class="row overflow-auto" style="flex-grow:1;">                
-                <div class="col-md-4">
-                    <app-card [producto]="productos[0]"></app-card>
+                <div class="col-md-4" *ngFor="let producto of productos" >                    
+                    <app-card [producto]="producto"></app-card>
                 </div>                                
             </div>
         </div>
