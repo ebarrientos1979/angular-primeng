@@ -1,17 +1,23 @@
-<div class="row-2 p-4">
-    <div class="col-2">
-        <p-card [header]="producto.title">
-            <p-card [header]="producto.description" [subheader]="producto.price.toString()" [style]="{ width: '25vh' }">
-                <ng-template pTemplate="header">
-                    <img alt="Card" [src]="producto.image" />
-                </ng-template>                
-                <ng-template pTemplate="footer">
-                    <div class="flex gap-3 mt-1">                        
-                        <p-button label="Seleccionar" class="w-full" styleClass="w-full" />
-                    </div>
-                </ng-template>
-            </p-card>
-        </p-card>
-    </div>
-</div>
-
+<ng-container id="contenedorImagen">
+    <p-card
+        [header]="producto.title | title2lines:40 | uppercase "
+        [subheader]="producto.description | title2lines:100 | lowercase"
+        [style]="{width: '40vh'}">
+        <ng-template pTemplate="header">
+            <div
+                style="display:flex; justify-content: center;align-items: center;">
+                <p-image
+                    [src]="producto.image"
+                    alt="Imagen"
+                    width="80"
+                    height="100" />
+            </div>
+        </ng-template>
+        <label><strong>{{ producto.price | number:'1.2-2' | currency:'S/. '
+                }}</strong></label>
+        <div class="flex mt-1">
+            <p-button label="Seleccionar" class="w-full"
+                styleClass="w-full"></p-button>
+        </div>
+    </p-card>
+</ng-container>
