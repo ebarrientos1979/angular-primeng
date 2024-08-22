@@ -32,6 +32,7 @@ export class FindProductoComponent implements OnInit {
       this.productos = p.productos;
       this.productos.forEach((producto) => {
         this.suggestionsOrig.push(producto.title);
+        this.suggestionsOrig.push(producto.description);
       });
     });
   }

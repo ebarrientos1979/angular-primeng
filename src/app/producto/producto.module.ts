@@ -8,9 +8,15 @@ import { AutoCompleteModule } from 'primeng/autocomplete';
 import { FormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 import { Title2Lines } from './pipes/title2lines.pipe';
+import { ListadoComponent } from './components/listado/listado.component';
 
 @NgModule({
-  declarations: [CardComponent, FindProductoComponent, Title2Lines],
+  declarations: [
+    CardComponent,
+    FindProductoComponent,
+    Title2Lines,
+    ListadoComponent,
+  ],
   imports: [
     CommonModule,
     Button,
@@ -19,6 +25,6 @@ import { Title2Lines } from './pipes/title2lines.pipe';
     FormsModule,
     ImageModule,
   ],
-  exports: [CardComponent, FindProductoComponent],
+  exports: [CardComponent, FindProductoComponent, ListadoComponent],
 })
 export class ProductoModule {}
