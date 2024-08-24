@@ -3,7 +3,7 @@
     <div class="d-flex flex-grow-1">
         <app-sidebar-main></app-sidebar-main>
         <div class="d-flex flex-column flex-fill">
-            <app-find-producto></app-find-producto>
+            <app-find-producto (evento)="sugerir($event)" ></app-find-producto>
             <app-listado [productos]="productos"></app-listado>
         </div>
     </div>
