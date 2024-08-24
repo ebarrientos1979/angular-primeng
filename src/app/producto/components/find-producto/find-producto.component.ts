@@ -9,6 +9,7 @@ import {
 } from '@angular/core';
 import { ProductosService } from '../../services/productos.service';
 import { Producto, ProductoInterface } from '../../model/producto.model';
+import { AutoCompleteDropdownClickEvent } from 'primeng/autocomplete';
 
 interface AutoCompleteCompleteEvent {
   originalEvent: Event;
@@ -29,6 +30,15 @@ export class FindProductoComponent implements OnInit {
   suggestions: any[] = [];
 
   constructor(private productosService: ProductosService) {}
+
+  click(e: any) {
+    console.log(e.value);
+    //let copiaProductos = this.productos;
+    let copiaProductos = this.productos.filter(
+      (producto) => producto.title == e.value
+    );
+    this.evento.emit(copiaProductos);
+  }
 
   buscarProductos(e: KeyboardEvent) {
     if (this.myAC.value.length == 0) {
