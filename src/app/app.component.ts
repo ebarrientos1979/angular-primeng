@@ -10,12 +10,17 @@ import { Meta, Title } from '@angular/platform-browser';
 })
 export class AppComponent implements OnInit {
   productos: Producto[] = [];
+  produc: Producto | undefined;
 
   constructor(
     private productosService: ProductosService,
     private meta: Meta,
     private titleService: Title
   ) {}
+
+  clickListado(p: Producto) {
+    this.produc = p;
+  }
 
   sugerir(productos: Array<Producto>) {
     this.productos = productos;
@@ -27,9 +32,9 @@ export class AppComponent implements OnInit {
       .subscribe((data: ProductoInterface) => {
         this.productos = data.productos;
       });
+    this.setMetaTags();
   }
 
-  /*
   setMetaTags() {
     this.titleService.setTitle('Aplicacion Dinamica en Angular');
 
@@ -50,5 +55,4 @@ export class AppComponent implements OnInit {
       { name: 'og:locale', content: 'es_ES' },
     ]);
   }
-    */
 }

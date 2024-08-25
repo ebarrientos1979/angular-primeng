@@ -10,6 +10,8 @@ import { ProductoModule } from './producto/producto.module';
 import { CardModule } from 'primeng/card';
 import { GeneralModule } from './general/general.module';
 import { provideHttpClient } from '@angular/common/http';
+import { ImageModule } from 'primeng/image';
+import { TagModule } from 'primeng/tag';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
@@ -19,7 +21,9 @@ import { provideHttpClient } from '@angular/common/http';
     ButtonModule,
     ProductoModule,
     CardModule,
+    ImageModule,
     DataViewModule,
+    TagModule,
     GeneralModule,
     BrowserAnimationsModule,
   ],

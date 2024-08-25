@@ -2,9 +2,37 @@
     <h3 class="text-light">Carrito</h3>
     <hr class="text-white">
     <div class="list-group list-reset">
-        <p-dataView>
+        <p-dataView *ngIf="listaProductos.length>0">
             <ng-template pTemplate="list" let-products>
+                <div class="grid grid-nogutter">
+                    <div class="col-12" *ngFor="let item of listaProductos; let first = first" class="col-12">
+                        <div class="flex flex-column sm:flex-row sm:align-items-center p-4 gap-3" [ngClass]="{ 'border-top-1 surface-border': !first }">
+                            <div class="md:w-10rem relative">                                
+                                <p-image
+                                    [src]="item?.image"
+                                    alt="Imagen"
+                                    width="80"
+                                    height="100" />                                   
+    
+                                <p-tag [value]="'S/. '.concat(item.price.toFixed(2).toString())"                                 
+                                severity="success" 
+                                class="absolute" [style.left.px]="4" [style.top.px]="4" />
 
+                                <p-tag [value]="item.valor" 
+                                class="absolute"
+                                [rounded]="true" [style.left.px]="1" [style.bottom.px]="4"/>
+                            </div>
+                            <div class="flex flex-column md:flex-row justify-content-between md:align-items-center flex-1 gap-4">
+                                <div class="flex flex-row md:flex-column justify-content-between align-items-start gap-2">
+                                    <div>
+                                        <strong><div class="text-lg font-medium text-900 mt-2">{{ item.title }}</div></strong>
+                                        <span class="font-medium text-secondary text-sm">{{ item.category }}</span>                                        
+                                    </div>
+                                </div>
+                            </div>          
+                        </div>
+                    </div>
+                </div>
             </ng-template>
         </p-dataView>
     </div>

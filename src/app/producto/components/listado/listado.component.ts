@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { Input } from '@angular/core';
 import { Producto } from '../../model/producto.model';
 
@@ -9,4 +9,10 @@ import { Producto } from '../../model/producto.model';
 export class ListadoComponent {
   @Input()
   productos!: Producto[];
+  @Output()
+  clickado = new EventEmitter<Producto>();
+
+  clickButton(e: any) {
+    this.clickado.emit(e);
+  }
 }

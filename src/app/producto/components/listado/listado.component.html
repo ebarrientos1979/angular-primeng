@@ -1,5 +1,5 @@
 <div class="row overflow-auto" style="flex-grow:1;">                
     <div class="col-md-4" *ngFor="let producto of productos" >                    
-        <app-card [producto]="producto"></app-card>
+        <app-card [producto]="producto" (clickButton)="clickButton($event)" ></app-card>
     </div>                                
 </div>

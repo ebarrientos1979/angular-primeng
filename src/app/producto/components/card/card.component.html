@@ -9,15 +9,21 @@
                     style="display:flex; justify-content: center;align-items: center;">
                     <p-image
                         [src]="producto.image"
+                        [preview]="true" 
                         alt="Imagen"
                         width="80"
-                        height="100" />
+                        height="100"
+                        [loading]="" >
+                        <ng-template pTemplate="indicator">
+                            <i class="pi pi-check"></i>
+                        </ng-template>
+                        </p-image>
                 </div>
             </ng-template>
             <label><strong>{{ producto.price | number:'1.2-2' | currency:'S/. '
                     }}</strong></label>
             <div class="flex mt-1">
-                <p-button label="Seleccionar" class="w-full"
+                <p-button label="Seleccionar" class="w-full" (onClick)="click($event)"
                     styleClass="w-full"></p-button>
             </div>
         </p-card>

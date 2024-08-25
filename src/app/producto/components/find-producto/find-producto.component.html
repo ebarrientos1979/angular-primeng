@@ -8,8 +8,9 @@
             [(ngModel)]="selectedItem"
             [suggestions]="suggestions"
             (onKeyUp)="buscarProductos($event)"
-            (onSelect)="click($event)"
+            (onSelect)="click($event)"            
             (completeMethod)="search($event)" />
+            <p-button label="Limpiar" severity="warning" />
     </div>
     <div class="d-flex justify-content-center align-items-center gap-2">
         <small>
