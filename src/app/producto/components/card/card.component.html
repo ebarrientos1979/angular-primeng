@@ -7,17 +7,25 @@
             <ng-template pTemplate="header">
                 <div
                     style="display:flex; justify-content: center;align-items: center;">
+
+                    <div style="position: relative; width: 100px; height: 100 px;">
+                        <i *ngIf="isLoading" class="pi pi-spin pi-spinner"
+                        style="position: absolute; top: 50%; left: 50%;transform: translate(-50%, -50%) ;">
+
+                        </i>
+
                     <p-image
                         [src]="producto.image"
                         [preview]="true" 
                         alt="Imagen"
                         width="80"
                         height="100"
-                        [loading]="" >
+                        >
                         <ng-template pTemplate="indicator">
                             <i class="pi pi-check"></i>
                         </ng-template>
                         </p-image>
+                    </div>                    
                 </div>
             </ng-template>
             <label><strong>{{ producto.price | number:'1.2-2' | currency:'S/. '

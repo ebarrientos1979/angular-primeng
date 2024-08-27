@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { ImageModule } from 'primeng/image';
 import { Title2Lines } from './pipes/title2lines.pipe';
 import { ListadoComponent } from './components/listado/listado.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ListadoComponent } from './components/listado/listado.component';
   imports: [
     CommonModule,
     Button,
+    ProgressSpinnerModule,
     CardModule,
     AutoCompleteModule,
     FormsModule,

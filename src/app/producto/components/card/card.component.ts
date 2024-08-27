@@ -8,6 +8,7 @@ import { OutletContext } from '@angular/router';
   styleUrl: './card.component.scss',
 })
 export class CardComponent implements OnInit {
+  isLoading: boolean = true;
   @Input() producto!: Producto;
   @Output() clickButton = new EventEmitter<Producto>();
 
@@ -16,4 +17,8 @@ export class CardComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  ImagenMostrada() {
+    console.log('La imagen se cargo...');
+  }
 }

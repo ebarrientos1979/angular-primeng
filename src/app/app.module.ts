@@ -12,12 +12,14 @@ import { GeneralModule } from './general/general.module';
 import { provideHttpClient } from '@angular/common/http';
 import { ImageModule } from 'primeng/image';
 import { TagModule } from 'primeng/tag';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
 
 @NgModule({
   declarations: [AppComponent, SidebarMainComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ProgressSpinnerModule,
     ButtonModule,
     ProductoModule,
     CardModule,
