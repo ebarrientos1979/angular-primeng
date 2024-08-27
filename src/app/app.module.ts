@@ -13,9 +13,10 @@ import { provideHttpClient } from '@angular/common/http';
 import { ImageModule } from 'primeng/image';
 import { TagModule } from 'primeng/tag';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { FormshoppingComponent } from './formularios/formshopping/formshopping.component';
 
 @NgModule({
-  declarations: [AppComponent, SidebarMainComponent],
+  declarations: [AppComponent, SidebarMainComponent, FormshoppingComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

@@ -1,12 +1,6 @@
 <div class="d-flex flex-column">
     <app-menu-main></app-menu-main>
-    <div class="d-flex flex-grow-1">
-        <app-sidebar-main [producto]="produc" ></app-sidebar-main>
-        <div class="d-flex flex-column flex-fill">
-            <app-find-producto (evento)="sugerir($event)" ></app-find-producto>
-            <app-listado [productos]="productos" (clickado)="clickListado($event)"></app-listado>
-        </div>
-    </div>
+    <router-outlet></router-outlet>
 </div>
 
 
